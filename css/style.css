@@ -213,7 +213,7 @@ footer a {
         transition: all .3s;
        }
        .card:hover {
-        transform: scale(1.03);
+        transform: scale(1.09);
        }
        body {
         display: flex;       

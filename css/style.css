@@ -82,6 +82,7 @@ main section p {
 .card img {
     width: 100%;
     animation: fromBottom 1.2s;
+    
 }
 .card h2 {
     font-family: 'Staatliches', cursive;
@@ -174,9 +175,6 @@ footer a {
        .title-wrapper {
         margin-top: 3rem;
         min-height: 7rem;
-       }
-       .card h2 {
-        display: none;
        }
        footer {
         display: inline;

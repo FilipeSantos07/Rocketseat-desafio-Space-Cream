@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Palanquin&family=Roboto&family=Staatliches&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    font-size: 62.5%;
+    --white: #FFFFFF;
+    --lightpink: #FEEAFA;
+    --darkpink: #CBC0D3;
+    --verylightblue: #EFF1FF;
+    --lightblue: #8E9AAF;
+    --darkblue: #4A4E69;
+    --darkpurple: #23053A;
+}
+body {
+    font-size: 1.6rem;
+    background: var(--verylightblue);
+}
+header {
+    background: var(--lightblue);
+    width: 100%;
+    text-align: center;
+    padding-top: 1.2rem;
+    padding-bottom: 2.7rem;
+}
+header img {
+    width: 16.7rem;
+    height: 16.7rem;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    transition: all 3s;
+}
+header img:hover {
+    transform: rotate(360deg);
+}
+header .title-wrapper {
+    background: var(--darkpink);
+    height: 4.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header h1 {
+    font-family: 'Staatliches', cursive;
+    font-weight: 400;
+    font-size: clamp(2.5rem, 0.5rem + 8vw , 4.0rem);
+    line-height: 3.4rem;
+    letter-spacing: 0.05em;
+    color: var(--white);
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+main {
+    max-width: clamp(33rem, 30rem +60vw, 70rem);
+    margin: auto;
+    width: 90%;
+}
+main section {   
+    max-width: 30.5rem;
+    margin: auto;
+    padding-top: 2.5rem;
+}
+main section p {
+    font-family: 'Palanquin', sans-serif;
+    font-weight: 400;
+    font-size: clamp(1.5rem, 0.5rem + 3vw, 2.0rem);
+    line-height: 2.3rem;
+    text-align: center;
+    color: var(--darkpurple);
+}
+.card-wrapper {
+    margin-top: 6.3rem;
+    margin-bottom: 6.0rem;
+    display: grid;
+    gap: 3.2rem;
+}
+.card {
+    position: relative;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.card img {
+    width: 100%;
+    animation: fromBottom 1.2s;
+}
+.card h2 {
+    font-family: 'Staatliches', cursive;
+    font-weight: 400;
+    font-size: 2.0rem;
+    line-height: 3.4rem;
+    letter-spacing: 0.05em;
+    color: var(--darkblue);
+    position: absolute;
+    top: 1.6rem;
+    right: 1.6rem;
+    background: var(--lightpink);
+    height: 3.5rem;
+    border-radius: 2.0rem;
+    padding: 0 2.4rem;
+    display: inline-flex;
+    align-items: center;
+    animation: fromTop 1.2s .2s backwards;
+}
+footer {
+    display: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+    color: var(--darkblue);
+    padding-bottom: 10rem;
+}
+footer a {
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+    color: var(--darkblue);
+
+}
+@keyframes fromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(5rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-3rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@media (min-width:700px) and (max-width:1240px) {
+       body {
+        display: flex;       
+       }
+       main {
+        padding: 0 5rem;
+       }
+       section {
+        display: none;
+       }
+       header::after {
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a rhoncus leo. Donec at scelerisque magna. Nullam vitae neque sit amet erat dignissim cursus ac ac lectus. Aliquam erat volutpat. Praesent at quam aliquet, pharetra est in, sagittis lorem.elit. Donec a rhoncus leo. ";
+        color: var(--white);
+        font-size: 2.4rem;
+        line-height: 3.0rem;
+        display: block;
+        margin: auto;
+        max-width: 40.5rem;
+        font-family: 'Roboto', sans-serif;
+        padding-top: 5rem;
+        width: 80%;
+       }
+       header h1 {
+        font-size: clamp(3rem, 0.5rem + 3vw , 4.8rem);
+       }
+       header img {
+        width: 25rem;
+        height: 21rem;
+       }
+       .headerbox {
+        margin-top: 2rem;
+       }
+       .title-wrapper {
+        margin-top: 3rem;
+        min-height: 7rem;
+       }
+       .card h2 {
+        display: none;
+       }
+       footer {
+        display: inline;
+        text-align: center;
+        margin-bottom: 5rem;
+       }
+    }
+
+@media (min-width:1241px) {
+    .card-wrapper {
+        grid-template-areas: 
+        "img1 img4 img5"
+        "img2 img4 img6"
+        "img2 img3 img6"
+        ;
+        }  
+        .card-wrapper div:nth-child(1) {
+            grid-area: img1;
+       }
+       .card-wrapper div:nth-child(2) {
+            grid-area: img4;    
+       }
+       .card-wrapper div:nth-child(3) {
+            grid-area: img3;     
+       }
+       .card-wrapper div:nth-child(4) {
+            grid-area: img2;      
+       }
+       .card-wrapper div:nth-child(5) {
+            grid-area: img5;       
+       }
+       .card-wrapper div:nth-child(6) {
+            grid-area: img6;      
+       }
+       .card {
+        transition: all .3s;
+       }
+       .card:hover {
+        transform: scale(1.03);
+       }
+       body {
+        display: flex;       
+       }
+       main {
+        padding: 0 5rem 5rem;
+       }
+       section {
+        display: none;
+       }
+       header {
+        width: 40%;
+       }
+       header::after {
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a rhoncus leo. Donec at scelerisque magna. Nullam vitae neque sit amet erat dignissim cursus ac ac lectus. Aliquam erat volutpat. Praesent at quam aliquet, pharetra est in, sagittis lorem.elit. Donec a rhoncus leo. ";
+        color: var(--white);
+        font-size: 2.4rem;
+        line-height: 3.0rem;
+        display: block;
+        margin: auto;
+        max-width: 40.5rem;
+        font-family: 'Roboto', sans-serif;
+        padding-top: 5rem;
+        width: 80%;
+       }
+       header h1 {
+        font-size: clamp(3rem, 0.5rem + 3vw , 4.8rem);
+       }
+       header img {
+        width: 25rem;
+        height: 21rem;
+       }
+       .headerbox {
+        margin-top: 2rem;
+       }
+       .title-wrapper {
+        margin-top: 3rem;
+        min-height: 7rem;
+       }
+       .title-wrapper h1 {
+        font-size: ;
+       }
+       .card h2 {
+        display: none;
+       }
+       footer {
+        display: inline;
+        text-align: center;
+        margin-bottom: 5rem;
+       }
+    }
